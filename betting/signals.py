@@ -1,7 +1,9 @@
 from django.db.models.signals import post_save
-from django.dispatch import receiver, Signal
-from .tasks import recalculate_odds, distribute_winnings_task
-from .models import Race, Bet
+from django.dispatch import receiver
+
+from .models import Bet, Race
+from .tasks import distribute_winnings_task, recalculate_odds
+
 
 @receiver(post_save, sender=Bet)
 def trigger_recalculate_odds(sender, instance, created, **kwargs):
@@ -11,5 +13,5 @@ def trigger_recalculate_odds(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=Race)
 def race_update_handler(sender, instance, **kwargs):
-    if instance.status == 'finished':  # Replace 'finished' with your specific status value
+    if instance.status == 'finished':
         distribute_winnings_task.delay(instance.id)

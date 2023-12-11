@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Race, Horse, Bet, Odds, Event
+
+from .models import Bet, Event, Horse, Odds, Race
 
 admin.site.register(Race)
 admin.site.register(Horse)

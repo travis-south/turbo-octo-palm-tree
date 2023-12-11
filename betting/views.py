@@ -1,7 +1,10 @@
 
 from rest_framework import viewsets
-from .models import Race, Horse, Bet, Odds, Event
-from .serializers import RaceSerializer, HorseSerializer, BetSerializer, OddsSerializer, EventSerializer
+
+from .models import Bet, Event, Horse, Odds, Race
+from .serializers import (BetSerializer, EventSerializer, HorseSerializer,
+                          OddsSerializer, RaceSerializer)
+
 
 class RaceViewSet(viewsets.ModelViewSet):
     queryset = Race.objects.all()

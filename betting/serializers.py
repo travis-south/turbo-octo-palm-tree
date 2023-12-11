@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import Race, Horse, Bet, Odds, Event
+
+from .models import Bet, Event, Horse, Odds, Race
+
 
 class RaceSerializer(serializers.ModelSerializer):
     class Meta:

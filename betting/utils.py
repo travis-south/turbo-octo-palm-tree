@@ -1,9 +1,12 @@
 import csv
-from django.utils.dateparse import parse_datetime
-from .models import Race, Horse, Odds, User, distribute_winnings, place_bet
-from django.db.models import QuerySet
-from django.core.exceptions import ObjectDoesNotExist
 from typing import Dict, NoReturn
+
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import QuerySet
+from django.utils.dateparse import parse_datetime
+
+from .models import Horse, Odds, Race, User, distribute_winnings, place_bet
+
 
 def handle_race_data(row):
     try:

@@ -1,5 +1,7 @@
 from django.core.management.base import BaseCommand
+
 from ...utils import process_event_csv
+
 
 class Command(BaseCommand):
     help = 'Processes a CSV file of race event data'
