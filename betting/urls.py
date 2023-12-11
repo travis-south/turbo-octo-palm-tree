@@ -1,0 +1,14 @@
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import RaceViewSet, EventViewSet, HorseViewSet, BetViewSet, OddsViewSet
+
+router = DefaultRouter()
+router.register(r'races', RaceViewSet)
+router.register(r'events', EventViewSet)
+router.register(r'horses', HorseViewSet)
+router.register(r'bets', BetViewSet)
+router.register(r'odds', OddsViewSet)
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
