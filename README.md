@@ -107,4 +107,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Irvin Capagcuan – [irvin@capagcuan.org](mailto:irvin@capagcuan.org)
 
-Project Link: [https://github.com/travis-south/horse_race_betting](https://github.com/travis-south/horse_race_betting)
+Project Link: [https://github.com/travis-south/turbo-octo-palm-tree](https://github.com/travis-south/turbo-octo-palm-tree)
