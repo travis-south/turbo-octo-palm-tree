@@ -6,9 +6,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=yourdbname
-      - POSTGRES_USER=yourdbuser
-      - POSTGRES_PASSWORD=yourdbpassword
+      - POSTGRES_DB=horse_race_betting
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
 
   redis:
     image: redis
@@ -26,7 +26,7 @@ services:
       - db
       - redis
     environment:
-      - DATABASE_URL=postgres://yourdbuser:yourdbpassword@db:5432/yourdbname
+      - DATABASE_URL=postgres://user:password@db:5432/horse_race_betting
       - REDIS_URL=redis://redis:6379/1
   
   celery:
@@ -37,6 +37,7 @@ services:
     depends_on:
       - db
       - redis
+      - web
 
 volumes:
   postgres_data:

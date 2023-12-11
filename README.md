@@ -75,7 +75,8 @@ FYI, This is not yet finished and not fully working (due to time constraint). Th
 1. **Build and run docker-compose**
 
    ```bash
-   docker-compose up --build
+   docker-compose up --build -d
+   docker-compose exec web python manage.py migrate
    ```
 
    The application will be available at `http://localhost:8000`.
