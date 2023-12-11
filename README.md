@@ -6,7 +6,7 @@ This project is a Django-based web application for simulating a betting system f
 
 ## Reviewer's note
 
-FYI, This is not yet finished and not fully working (due to time constraint). This is using Django and DEF to provide the api and management. It has command that you will parse the csv file and process it based on the events. This also has Celery to handle all the async task. I have also added the docker and docker-compose to make it easier to run the project. I haven't added anything for monitoring but we are using Django's built-in logging and push it to a centralized logging system like ELK or Splunk.
+FYI, This is not yet finished and not fully working (due to time constraint). This is using Django and DRF to provide the api and management. It has command that you will parse the csv file and process it based on the events. This also has Celery to handle all the async task. I have also added the docker and docker-compose to make it easier to run the project. I haven't added anything for monitoring but we are using Django's built-in logging and push it to a centralized logging system like ELK or Splunk.
 
 ## Features
 
